@@ -1,0 +1,33 @@
+<h1>Listing rushing_stats</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Rushing att</th>
+    <th>Rushing yards</th>
+    <th>Rushing att avg</th>
+    <th>Rushing long</th>
+    <th>Rushing td</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rushing_stats.each do |rushing_stat| %>
+  <tr>
+    <td><%= rushing_stat.name %></td>
+    <td><%= rushing_stat.rushing_att %></td>
+    <td><%= rushing_stat.rushing_yards %></td>
+    <td><%= rushing_stat.rushing_att_avg %></td>
+    <td><%= rushing_stat.rushing_long %></td>
+    <td><%= rushing_stat.rushing_td %></td>
+    <td><%= link_to 'Show', rushing_stat %></td>
+    <td><%= link_to 'Edit', edit_rushing_stat_path(rushing_stat) %></td>
+    <td><%= link_to 'Destroy', rushing_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rushing stat', new_rushing_stat_path %>

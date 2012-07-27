@@ -1,0 +1,41 @@
+<%= form_for(@rushing_stat) do |f| %>
+  <% if @rushing_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rushing_stat.errors.count, "error") %> prohibited this rushing_stat from being saved:</h2>
+
+      <ul>
+      <% @rushing_stat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :rushing_att %><br />
+    <%= f.number_field :rushing_att %>
+  </div>
+  <div class="field">
+    <%= f.label :rushing_yards %><br />
+    <%= f.number_field :rushing_yards %>
+  </div>
+  <div class="field">
+    <%= f.label :rushing_att_avg %><br />
+    <%= f.text_field :rushing_att_avg %>
+  </div>
+  <div class="field">
+    <%= f.label :rushing_long %><br />
+    <%= f.number_field :rushing_long %>
+  </div>
+  <div class="field">
+    <%= f.label :rushing_td %><br />
+    <%= f.number_field :rushing_td %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

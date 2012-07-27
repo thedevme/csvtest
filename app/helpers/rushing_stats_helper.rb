@@ -1,0 +1,2 @@
+module RushingStatsHelper
+end
